@@ -5,7 +5,8 @@ const products = [
         price: 630,
         sizes: ["S", "M", "L", "XL"],
         images: ["images/Shirt_1.png"],
-        description: "A comfortable white t-shirt featuring a cute cat design."
+        description: "A comfortable white t-shirt featuring a cute cat design.",
+        sizingAndFit: "Fits large to size, take one size smaller"
     },
     {
         id: 2,
@@ -16,7 +17,8 @@ const products = [
         images: [
             "images/Shirt_2.png"
         ], 
-        description: "A comfortable white t-shirt featuring a beautiful illustration of a woman."
+        description: "A comfortable white t-shirt featuring a beautiful illustration of a woman.",
+        sizingAndFit: "Fits large to size, take one size smaller"
     },
     {
         id: 3,
@@ -27,7 +29,8 @@ const products = [
         images: [
            "images/Shirt_3.png"
         ], 
-        description: "A comfortable white t-shirt featuring a cool illustration of a lion."
+        description: "A comfortable white t-shirt featuring a cool illustration of a lion.",
+        sizingAndFit: "Fits large to size, take one size smaller"
     },
     {
         id: 4,
@@ -38,7 +41,8 @@ const products = [
         images: [
             "images/Shirt_4.png"
         ], 
-        description: "A comfortable white t-shirt featuring the visuals \"Planet Over Profit\"."
+        description: "A comfortable white t-shirt featuring the visuals \"Planet Over Profit\".",
+        sizingAndFit: "Fits large to size, take one size smaller"
     },
 ];
 
@@ -59,6 +63,7 @@ function populateProductPage() {
         document.getElementById('product-title').textContent = product.title;
         document.getElementById('product-price').textContent = `₱${product.price.toFixed(2)}`;
         document.getElementById('product-description').textContent = product.description;
+        document.getElementById('product-sizeAndFit').textContent = product.sizingAndFit;
         
         const sizeSelect = document.getElementById('size');
         product.sizes.forEach(size => {
