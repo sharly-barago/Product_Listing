@@ -10,15 +10,107 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="text-center my-5">Our Products</h1>
-        <div class="row" id="product-list">
-            <!-- Products will be dynamically added here :)-->
-        </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark py-2">
+        <div class="container">
+            <a class="navbar-brand" href="#">Gestourage</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cart</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">For Men</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">For Women</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+            <div class="sidebar-section">
+                <h5 class="mt-4 mb-3">Categories</h5>
+                <div class="accordion" id="categoryAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                Clothing
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#categoryAccordion">
+                            <div class="accordion-body">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="category1">
+                                    <label class="form-check-label" for="category1">
+                                        T-Shirts
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="category2">
+                                    <label class="form-check-label" for="category2">
+                                        Jackets
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </nav>
+
+        <!-- Main content -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div
+                class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2 mt-2">Our Products</h1>
+                <div class="btn-toolbar mb-2 mb-md-0">
+                    <button type="button" class="btn btn-sm btn-outline-secondary d-md-none" data-bs-toggle="collapse"
+                        data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false">
+                        Filters
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quick filters -->
+            <div class="mb-4 mt-2">
+                <button class="btn btn-outline-secondary me-2">All</button>
+                <button class="btn btn-outline-secondary me-2">T-Shirts</button>
+                <button class="btn btn-outline-secondary me-2">Jackets</button>
+            </div>
+
+            <!-- Product list -->
+            <div id="product-list" class="row">
+                <!-- Products will be dynamically added here -->
+            </div>
+        </main>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 
 </html>
